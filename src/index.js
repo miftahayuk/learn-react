@@ -11,6 +11,17 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// //bisa nemrima variabel
+// const name= "Miftah"
+
+// //bisa nerima function
+// function sayWelcome(name){
+//   return "Welcome "+name
+// }
+// // const element = <h1>Wlecome {name}!</h1>
+// const element = <h1>{sayWelcome(name)}!!!</h1>
+// ReactDOM.render(element,document.getElementById('example'))
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
