@@ -176,21 +176,51 @@
 
 
 //===============SINIGMA MULTI KOMPONEN==============//
-import React, { Component } from "react";
-import './MyStyle.css'
-import NavSinigma from "./siningma_website/nav_sinigma";
-import SectionSinigma from "./siningma_website/section_sinigma";
-import FooterSinigma from "./siningma_website/footer_sinigma";
+// import React, { Component } from "react";
+// import './MyStyle.css'
+// import NavSinigma from "./siningma_website/nav_sinigma";
+// import SectionSinigma from "./siningma_website/section_sinigma";
+// import FooterSinigma from "./siningma_website/footer_sinigma";
+// class App extends Component{
+//   render(){
+//     return(
+//       <>
+//       <NavSinigma/>
+//       <SectionSinigma/>
+//       <FooterSinigma/>
+//       </>
+//     );
+//   } 
+// }
+
+// export default App
+
+
+//======================PROPS=============================//
+import logo from './logo.svg'
+import './App.css'
+import { Component } from 'react'
+import BodyComponent from './BodyComponent'
+
+
 class App extends Component{
+  name = "Miftah"
   render(){
     return(
-      <>
-      <NavSinigma/>
-      <SectionSinigma/>
-      <FooterSinigma/>
-      </>
-    );
-  } 
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo"/>
+        </header>
+        <p>{this.name}</p>
+        <BodyComponent nameFromParent={this.name} address="Bekasi"/>
+        <BodyComponent nameFromParent="Ayu" address="Jogja"/>
+      </div>
+    )
+  }
 }
+
+
+
+
 
 export default App
