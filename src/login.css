@@ -1,0 +1,21 @@
+.mystyle {
+    color : "white";
+    background-color : lightgray;
+    padding: "10px";
+    font-family: "Arial"
+}
+
+.form-container{
+    /* height: 30vh; */
+    /* align-items: center; */
+    /* padding itu buat spasi atau ruang diantara konten dan border */
+    padding: 10%; 
+    margin-top: 8%;
+}
+
+.loginBox{
+    /* width: 22rem;
+    height: auto;
+    border-radius: 2px; */
+    box-shadow: 0 0 12px 0 rgba(0,115,230, 0.3);
+}
