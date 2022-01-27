@@ -2,6 +2,8 @@
 // import './App.css';
 // import './MyStyle.css'
 
+
+
 // function App() {
 //   const name = 'Miftah'
 //   function getButtonText(){
@@ -92,143 +94,10 @@
 // // }
 
 //===========================LATIHAN===================================//
-// import React, { Component } from "react";
-// import './MyStyle.css'
-// import enigma from './enigma.png';
-// import sinarmas from './sinarmas.png'
-// import list from './list.svg'
-// import form from './forms.svg'
-
-// function Header() {
-//   return(
-//     <header>
-//       <table className="center">
-//           <tr>
-//               <td>
-//                   <img src={sinarmas} alt="sinarmas logo image" width="120" height="50"/>
-//               </td>
-//               <td>
-//                   <img src={enigma} alt="enigma logo image" width="140" height="50"/>
-//               </td>
-//           </tr>
-//       </table>
-//       <h1 className="mystyle" >Sinigma Website</h1>
-//   </header>
-//     );
-// }
-
-// function Nav() {
-//   return(
-//     <div className="navbar">
-//       <li>
-//         <a href="https://www.enigmacamp.com/" target="_blank" className="center">Enigmacamp</a>
-//       </li>
-//       <li>
-//         <a href="https://www.sinarmasmining.com/" target="_blank" className="center">Sinarmas</a>
-//       </li>
-//     </div>
-//   )
-// }
-
-// function Section() {
-//   return(
-//       <div>
-//         <section>
-//         <h2>Enigmacamp IT Bootcamp</h2>
-//         <p>Didirikan pada tahun 2017, ENIGMA CAMP pada awalnya merupakan salah satu anak perusahaan PT. Square Techno Indonesia (STI) sampai di tahun 2019 berkembang menjadi sebuah perusahaan baru, PT. Enigma Cipta Humanika.</p>
-//         <p>Source: Website Enigmacamp</p>
-//         </section>
-//         <section>
-//         <h2>Sinarmas Mining</h2>
-//         <p>An Indonesian worldwide enterprise technology-based that holds business pillars from digitally-enabled financial services to energy & resources, from private equity to consumers & lifestyle.</p>
-//         <p>Source: Website Sinarmas Mining</p>
-//     </section>
-//       </div>
-
-//   )
-// }
-
-// function Article() {
-//   return(
-//     <div>
-//       <article>
-//         <h2>ITDP (Information Technology Development Program)</h2>
-//         <article>
-//             <h3 className="flex-container">Description</h3>
-//             <ul>
-//                 <li>Manage multiple challenging projects</li>
-//                 <li>Assess current state and define business solutions</li>
-//                 <li>Analyze and propose business needs</li>
-//             </ul>
-//         </article>
-//         <article>
-//             <h3 className="flex-container">Specifications</h3>
-            
-//             <ol>
-//                 <li>We offer a variety of formal and informal learning programs to help acquire and build specialized skill faster</li>
-//                 <li>A well-rounded foundation of technical skills including certification, functional, and leadership skills that are essential for a Technological Leader position within Sinarmas Mining Group for local and global businesses</li>
-//                 <li>Experience real-life multiple challenging projects that foster innovative and creative thinking during the program</li>
-//             </ol>
-//         </article>
-//     </article>
-//     </div>
-//   )
-// }
-
-// function Link() {
-//   return(
-//     // <div>
-//         <table>
-//         <tr>
-//             <td>
-//                 <h3><a href="./list-profile.html">List Profile</a></h3>
-//                 Disini berisikan data nama-nama trainee ITDP Batch 1.
-//                 <img src={list} alt="list" width="300" height="200"/>
-//                 <div class="flex-container">
-//                 <div>1</div>
-//                 <div>2</div>
-//                 <div>3</div>  
-//               </div>
-//                 {/* <img src="list.svg" alt="result image" width="300" height="200"> */}
-//             </td>
-//             <td>
-//                 <h3><a href="./forms.html">Forms</a></h3>
-//                 Disini berisikan data-data yang harus diisi.
-//                 <img src={form} alt="form" width="300" height="200"/>
-//             </td>
-//         </tr>
-//     </table>
-//     // </div>
-//   )
-// }
-
-// function Footer() {
-//   return(
-//      <footer>
-//         <p>Author: Enigmacamp</p>
-//         <p><a href="mailto: enigmacamp@ex.com">enigmacamp@ex.com</a></p>
-//     </footer>
-//   )
-// }
-// class App extends Component{
-//   render(){
-//     return(
-//       <div>
-//       <Header/>
-//       <Nav/>
-//       <Section/>
-//       {/* <Article/>
-//       <Link/>
-//       <Footer/> */}
-//       </div>
-//     )
-//   }
-// }
-
-// export default App; 
 
 
-//===============================================================================//
+
+//=====================================================================//
 //TUGAS LOGIN//
 
 // import React, { Component} from "react";
@@ -283,21 +152,42 @@
 
 // export default Login
 
-//================BELAJAR KOMPONEN==================//
+//================BELAJAR MULTI KOMPONEN==================//
 
-import React,{Component} from "react";
-import LoginScreen from "./Login";
-import NavbarScreen from "./NavbarScreen";
-import Footer from "./Footer";
+// import React,{Component} from "react";
+// import LoginScreen from "./Login";
+// import NavbarScreen from "./NavbarScreen";
+// import Footer from "./Footer";
+// import './MyStyle.css'
+
+// class App extends Component{
+//   render(){
+//     return(
+//       <>
+//       <NavbarScreen/>
+//       <LoginScreen/>
+//       <Footer/>
+//       </>
+//     );
+//   } 
+// }
+
+// export default App
+
+
+//===============SINIGMA MULTI KOMPONEN==============//
+import React, { Component } from "react";
 import './MyStyle.css'
-
+import NavSinigma from "./siningma_website/nav_sinigma";
+import SectionSinigma from "./siningma_website/section_sinigma";
+import FooterSinigma from "./siningma_website/footer_sinigma";
 class App extends Component{
   render(){
     return(
       <>
-      <NavbarScreen/>
-      <LoginScreen/>
-      <Footer/>
+      <NavSinigma/>
+      <SectionSinigma/>
+      <FooterSinigma/>
       </>
     );
   } 
