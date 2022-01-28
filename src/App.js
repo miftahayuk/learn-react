@@ -200,7 +200,8 @@
 import logo from './logo.svg'
 import './App.css'
 import { Component } from 'react'
-import BodyComponent from './BodyComponent'
+// import BodyComponent from './BodyComponent'
+import Count from './Count' 
 
 
 class App extends Component{
@@ -211,9 +212,10 @@ class App extends Component{
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
         </header>
-        <p>{this.name}</p>
+        {/* <p>{this.name}</p>
         <BodyComponent nameFromParent={this.name} address="Bekasi"/>
-        <BodyComponent nameFromParent="Ayu" address="Jogja"/>
+        <BodyComponent nameFromParent="Ayu" address="Jogja"/> */}
+        <Count/>
       </div>
     )
   }
