@@ -32,7 +32,7 @@ import { Component } from "react";
 //                 {/* cara lain pemanggilan arrow function pada function biasa */}
 //                 {/* <button onClick={()=>this.increment(parameter)}>+</button> */}
 
-//                 {/* jika tidak menggunakan arrow function */}
+//                 {/* jika tidak menggunakan arrow function pada function biasa */}
 //                  {/* <button onClick={this.increment.bind(this)}>+</button> */}
 
 //             </div>
@@ -57,7 +57,44 @@ import { Component } from "react";
 
 //===========================RE RENDER==================================//
 
-//re render tuh kayak ngebangun ulang gitu,
+// //re render tuh kayak ngebangun ulang gitu,
+// class Count extends Component{
+//     constructor(props){
+//         super(props)
+//         this.state ={
+//             number : 0
+//         }
+//     }
+
+//     increment = () => {
+//         console.log('increment',this);
+//         this.setState({
+//             number : this.state.number+1
+//         })
+//     }
+
+//     decrement = ()=>{
+//         let i =0.5
+//         console.log('decrement',this);
+//         this.setState({
+//             number : this.state.number-i
+//         })
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 <h1>{this.state.number}</h1>
+//                 <button onClick={()=>this.increment()}>+</button>
+//                 <button onClick={()=>this.decrement()}>-</button>
+//             </div>
+//         )
+//     }
+// }
+
+// export default Count
+
+
+import CounterButtonPlus from "./CounterButtonPlus";
 class Count extends Component{
     constructor(props){
         super(props)
@@ -66,26 +103,17 @@ class Count extends Component{
         }
     }
 
-    increment = () => {
-        console.log('increment',this);
+    increment=(number)=>{
         this.setState({
-            number : this.state.number+1
+            number : number
         })
     }
 
-    decrement = ()=>{
-        let i =0.5
-        console.log('decrement',this);
-        this.setState({
-            number : this.state.number-i
-        })
-    }
     render(){
         return(
             <div>
                 <h1>{this.state.number}</h1>
-                <button onClick={()=>this.increment()}>+</button>
-                <button onClick={()=>this.decrement()}>-</button>
+                <CounterButtonPlus callback={this.increment} numberFromCount={this.state.number}/>
             </div>
         )
     }

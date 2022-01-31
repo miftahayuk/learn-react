@@ -4,6 +4,8 @@
 
 
 
+
+
 // function App() {
 //   const name = 'Miftah'
 //   function getButtonText(){
@@ -197,32 +199,99 @@
 
 
 //======================PROPS=============================//
-import logo from './logo.svg'
-import './App.css'
-import { Component } from 'react'
-// import BodyComponent from './BodyComponent'
-import Count from './Count' 
+// import logo from './logo.svg'
+// import './App.css'
+// import { Component } from 'react'
+// // import BodyComponent from './BodyComponent'
+// import Count from './Count' 
 
 
-class App extends Component{
-  name = "Miftah"
-  render(){
-    return(
+// class App extends Component{
+//   name = "Miftah"
+//   render(){
+//     return(
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo"/>
+//         </header>
+//         {/* <p>{this.name}</p>
+//         <BodyComponent nameFromParent={this.name} address="Bekasi"/>
+//         <BodyComponent nameFromParent="Ayu" address="Jogja"/> */}
+//         <Count/>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App
+
+
+//========================================================================================//
+// import logo from './logo.svg'
+// import './App.css'
+// import { Component } from 'react'
+// // import BodyComponent from './BodyComponent'
+// // import Count from './Count' 
+// // import ChildComponent from './ChildComponent'
+// import Count from './Count'
+
+// class App extends Component{
+
+//   constructor(props) {
+//     super(props)
+
+//     this.state={
+//       message :'Masih kosong'
+//     }
+//   }
+
+//   getMessage =(msg)=>{
+//     this.setState({
+//       message : msg
+//     })
+//   }
+
+//   name = "Miftah"
+//   render(){
+//     return(
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo"/>
+//         </header>
+//         {/* <h1>{this.state.message}</h1> */}
+//         {/* <ChildComponent name={'Miftah'}  callback={this.getMessage}/> */}
+//         <Count/>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App
+
+
+
+//=====================================================//
+import logo from './logo.svg';
+import './App.css';
+import { Component } from 'react';
+
+import Trainees from './Trainees';
+
+
+class App extends Component {
+  render() {
+    return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
+          <img src={logo} className="App-logo" alt="logo" />
         </header>
-        {/* <p>{this.name}</p>
-        <BodyComponent nameFromParent={this.name} address="Bekasi"/>
-        <BodyComponent nameFromParent="Ayu" address="Jogja"/> */}
-        <Count/>
+        {/* <h1>{this.state.message}</h1>
+        <ChildComponent name="Chandler" callback={this.getMessage}/> */}
+        {/* <Count/> */}
+        <Trainees/>
       </div>
     )
   }
 }
 
-
-
-
-
-export default App
+export default App;
