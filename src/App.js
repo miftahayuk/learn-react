@@ -271,11 +271,39 @@
 
 
 //=====================================================//
+// import logo from './logo.svg';
+// import './App.css';
+// import { Component } from 'react';
+
+// import Trainees from './Trainees';
+
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo" />
+//         </header>
+//         {/* <h1>{this.state.message}</h1>
+//         <ChildComponent name="Chandler" callback={this.getMessage}/> */}
+//         {/* <Count/> */}
+//         <Trainees/>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App;
+
+
+
+//===================LIFE CYCLE==========================//
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
 
-import Trainees from './Trainees';
+import Clock from './react-lifecycle/Clock';
 
 
 class App extends Component {
@@ -285,10 +313,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        {/* <h1>{this.state.message}</h1>
-        <ChildComponent name="Chandler" callback={this.getMessage}/> */}
-        {/* <Count/> */}
-        <Trainees/>
+        <Clock/>
       </div>
     )
   }
