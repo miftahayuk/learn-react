@@ -299,11 +299,34 @@
 
 
 //===================LIFE CYCLE==========================//
-import logo from './logo.svg';
+// import logo from './logo.svg';
+// import './App.css';
+// import { Component } from 'react';
+
+// import Clock from './react-lifecycle/Clock';
+
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo" />
+//         </header>
+//         <Clock/>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App;
+
+//===================LIST==============================//
+import logo from './images/logo.svg';
 import './App.css';
 import { Component } from 'react';
-
-import Clock from './react-lifecycle/Clock';
+import FormOftrainee from './form-list/FormOftrainee';
+// import ListOfTrainee from './form-list/ListOftrainee';
 
 
 class App extends Component {
@@ -313,7 +336,8 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <Clock/>
+          <FormOftrainee/>
+          {/* <ListOfTrainee/> */}
       </div>
     )
   }

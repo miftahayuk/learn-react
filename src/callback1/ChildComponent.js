@@ -1,12 +1,13 @@
 import { Component } from "react";
 import GrandChildComponent from "./GrandChildComponent";
+//yang ngimport ituuu ortunyaaa
 
 class ChildComponent extends Component{
     
     // message ='this is message from child'
 
     sendPropsCallback=(msg)=>{
-        console.log(this.props);
+        // console.log(this.props);
         this.props.callback(msg)
     }
 

@@ -6,6 +6,7 @@ class NavbarScreen extends Component{
         return(
 
         //INI NAVBAR DARI REACT-BOOTSTRAP
+        
         // <Navbar bg="light" expand="lg">
         // <Container>
         //     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>

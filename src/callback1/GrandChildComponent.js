@@ -4,7 +4,7 @@ class GrandChildComponent extends Component{
     message = 'This is message from grand child component'
 
     sendPropsCallback2=()=>{
-        console.log(this.props);
+        // console.log(this.props);
         this.props.callback2(this.message)
     }
     render(){
