@@ -347,8 +347,26 @@ import FormOftrainee from './form-list/FormOftrainee';
 
 //==================HOC==============================
 
-import ClickCounter from './Hoc/ClickCounter';
-import HoverCounter from './Hoc/HoverCounter';
+// import ClickCounter from './Hoc/ClickCounter';
+// import HoverCounter from './Hoc/HoverCounter';
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo" />
+//         </header>
+//         <ClickCounter/><br/>
+//         <HoverCounter/>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App;
+
+
+//===================REDUX============================//
 class App extends Component {
   render() {
     return (
@@ -356,8 +374,6 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <ClickCounter/><br/>
-        <HoverCounter/>
       </div>
     )
   }
