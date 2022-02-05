@@ -5,11 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reduxReact/globalReducer';
+
+
+
+
+const store = createStore(rootReducer)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  //provider ini dr react-redux (pintu masuk) supaya si store ini bisa dipanggil oleh app dan anak2nya
+  <Provider store={store}>
+    <App/>
+  </Provider>,
   document.getElementById('root')
 );
 

@@ -325,7 +325,10 @@
 import logo from './images/logo.svg';
 import './App.css';
 import { Component } from 'react';
-import FormOftrainee from './form-list/FormOftrainee';
+// import FormOftrainee from './form-list/FormOftrainee';
+import FirstCounter from './reduxReact/FirstCounter';
+import SecondCounter from './reduxReact/SecondCounter';
+import { connect } from 'react-redux';
 // import ListOfTrainee from './form-list/ListOftrainee';
 
 
@@ -374,9 +377,18 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <h1>{this.props.number}</h1>
+        <FirstCounter/>
+        <br/>
+        <SecondCounter/>
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps=(state)=>{
+  return{
+    number : state.globalNumber
+  }
+}
+export default connect(mapStateToProps) (App);
