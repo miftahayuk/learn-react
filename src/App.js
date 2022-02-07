@@ -322,13 +322,13 @@
 // export default App;
 
 //===================LIST==============================//
-import logo from './images/logo.svg';
-import './App.css';
-import { Component } from 'react';
-// import FormOftrainee from './form-list/FormOftrainee';
-import FirstCounter from './reduxReact/FirstCounter';
-import SecondCounter from './reduxReact/SecondCounter';
-import { connect } from 'react-redux';
+// import logo from './images/logo.svg';
+// import './App.css';
+// import { Component } from 'react';
+// // import FormOftrainee from './form-list/FormOftrainee';
+// import FirstCounter from './reduxReact/FirstCounter';
+// import SecondCounter from './reduxReact/SecondCounter';
+// import { connect } from 'react-redux';
 // import ListOfTrainee from './form-list/ListOftrainee';
 
 
@@ -348,7 +348,7 @@ import { connect } from 'react-redux';
 
 // export default App;
 
-//==================HOC==============================
+//==================HOC==============================//
 
 // import ClickCounter from './Hoc/ClickCounter';
 // import HoverCounter from './Hoc/HoverCounter';
@@ -370,25 +370,51 @@ import { connect } from 'react-redux';
 
 
 //===================REDUX============================//
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo" />
+//         </header>
+//         <h1>{this.props.number}</h1>
+//         <FirstCounter/>
+//         <br/>
+//         <SecondCounter/>
+//       </div>
+//     )
+//   }
+// }
+
+// const mapStateToProps=(state)=>{
+//   return{
+//     number : state.globalNumber
+//   }
+// }
+// export default connect(mapStateToProps) (App);
+
+//=================TO DO LIST REDUX=====================//
+import './reduxReactAssessment/styleReduxAss.css'
+import './App.css';
+import { Component} from 'react';
+import ListTodo from './reduxReactAssessment/List';
+import FormTodoList from './reduxReactAssessment/Form'
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          TO DO LIST APP
         </header>
-        <h1>{this.props.number}</h1>
-        <FirstCounter/>
-        <br/>
-        <SecondCounter/>
+        <FormTodoList/>
+        <ListTodo/>
       </div>
     )
   }
 }
 
-const mapStateToProps=(state)=>{
-  return{
-    number : state.globalNumber
-  }
-}
-export default connect(mapStateToProps) (App);
+
+export default (App);
+
+

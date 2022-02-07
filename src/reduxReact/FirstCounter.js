@@ -24,6 +24,7 @@ const mapStateToProps=(state)=>{
     }
 }
 
+
 const mapDispatchToProps=(dispatch)=>{
     return{
         handlePlus:()=>dispatch({type: ActionType.PLUS}),

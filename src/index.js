@@ -7,12 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import rootReducer from './reduxReact/globalReducer';
+// import rootReducer from './reduxReact/globalReducer';
+import reducerTodoList from './reduxReactAssessment/globalReducerAss';
 
 
-
-
-const store = createStore(rootReducer)
+// const store = createStore(rootReducer)
+const store= createStore(reducerTodoList)
 
 ReactDOM.render(
   //provider ini dr react-redux (pintu masuk) supaya si store ini bisa dipanggil oleh app dan anak2nya
