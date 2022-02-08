@@ -399,6 +399,8 @@ import './App.css';
 import { Component} from 'react';
 import ListTodo from './reduxReactAssessment/List';
 import FormTodoList from './reduxReactAssessment/Form'
+import ActionTypeTodo from './reduxReactAssessment/globalActionTodo';
+import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
@@ -407,14 +409,26 @@ class App extends Component {
         <header className="App-header">
           TO DO LIST APP
         </header>
-        <FormTodoList/>
-        <ListTodo/>
+        {/* <FormTodoList/>
+        <ListTodo/> */}
+        {this.props.addForm? <ListTodo/> : <FormTodoList/>}
       </div>
     )
   }
 }
 
+const mapStateToProps=(state)=>{
+  return{
+    addForm : state.addForm
+  }
+}
 
-export default (App);
+// const mapDispatchToProps=(dispatch)=>{
+//   return{
+//     changeForm:(newCondition)=>dispatch({type:ActionTypeTodo.CHANGEADDFORM, condition: newCondition})
+//   }
+// }
+
+export default connect(mapStateToProps,mapDispatchToProps) (App);
 
 

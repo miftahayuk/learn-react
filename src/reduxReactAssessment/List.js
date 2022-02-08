@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { connect } from "react-redux";
+import ActionTypeTodo from "./globalActionTodo";
 
 class ListTodo extends Component{
   render(){
@@ -26,7 +27,7 @@ const mapStateToProps=(state)=>{
 const mapDispatchToProps=(dispatch)=>{
     return{
       handleClick:(id)=>dispatch({
-      type:'DELETE_TODO',
+      type:ActionTypeTodo.DELETE_TODO,
       payload:id
       })
     }

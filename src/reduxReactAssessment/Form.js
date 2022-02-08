@@ -1,12 +1,13 @@
 import {useState } from "react";
 import { useDispatch } from "react-redux";
+import ActionTypeTodo from "./globalActionTodo";
 
 const FormTodoList=()=>{
   const dispatch=useDispatch();
   const [newTodo, setNewTodo]=useState();
   const handleChange =event => setNewTodo(event.target.value);
   const handleSubmit=()=>dispatch({
-    type:'ADD_TODO',
+    type: ActionTypeTodo.ADD_TODO,
     payload:{
       label: newTodo,
       id: Math.ceil(Math.random()*100)
