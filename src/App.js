@@ -394,41 +394,126 @@
 // export default connect(mapStateToProps) (App);
 
 //=================TO DO LIST REDUX=====================//
-import './reduxReactAssessment/styleReduxAss.css'
-import './App.css';
-import { Component} from 'react';
-import ListTodo from './reduxReactAssessment/List';
-import FormTodoList from './reduxReactAssessment/Form'
-import ActionTypeTodo from './reduxReactAssessment/globalActionTodo';
-import { connect } from 'react-redux';
+// import './reduxReactAssessment/styleReduxAss.css'
+// import './App.css';
+// import { Component} from 'react';
+// import ListTodo from './reduxReactAssessment/List';
+// import FormTodoList from './reduxReactAssessment/Form'
+// import ActionTypeTodo from './reduxReactAssessment/globalActionTodo';
+// import { connect } from 'react-redux';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <header className="App-header">
-          TO DO LIST APP
-        </header>
-        {/* <FormTodoList/>
-        <ListTodo/> */}
-        {this.props.addForm? <ListTodo/> : <FormTodoList/>}
-      </div>
-    )
-  }
-}
-
-const mapStateToProps=(state)=>{
-  return{
-    addForm : state.addForm
-  }
-}
-
-// const mapDispatchToProps=(dispatch)=>{
-//   return{
-//     changeForm:(newCondition)=>dispatch({type:ActionTypeTodo.CHANGEADDFORM, condition: newCondition})
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <header className="App-header">
+//           TO DO LIST APP
+//         </header>
+//         {/* <FormTodoList/>
+//         <ListTodo/> */}
+//         {this.props.addForm? <ListTodo/> : <FormTodoList/>}
+//       </div>
+//     )
 //   }
 // }
 
-export default connect(mapStateToProps,mapDispatchToProps) (App);
+// const mapStateToProps=(state)=>{
+//   return{
+//     addForm : state.addForm
+//   }
+// }
+
+// // const mapDispatchToProps=(dispatch)=>{
+// //   return{
+// //     changeForm:(newCondition)=>dispatch({type:ActionTypeTodo.CHANGEADDFORM, condition: newCondition})
+// //   }
+// // }
+
+// export default connect(mapStateToProps,mapDispatchToProps) (App);
 
 
+//==================COUNTER CONTEXT=======================//
+
+// import logo from './images/logo.svg';
+// import './App.css';
+// import { Component, createContext } from 'react';
+// import FirstCounter from './context/FirstCounter';
+// import SecondCounter from './context/SecondCounter';
+
+
+// export const RootContext=createContext();
+// const Provider = RootContext.Provider
+
+// class App extends Component {
+//   state={
+//     globalNumber :0
+//   }
+
+//   dispatch=(action)=>{
+//      if(action.type==="PLUS"){
+//       this.setState({
+//         globalNumber : this.state.globalNumber+1
+//       })
+//      }
+    
+//      if(action.type==="MINUS"){
+//        this.setState({
+//          globalNumber : this.state.globalNumber-1
+//        })
+//      }
+//   }
+
+
+//   render() {
+//     return (
+//       <Provider value={{state:this.state, dispatch: this.dispatch}}>
+//         <div className="App">
+//           <header className="App-header">
+//             <img src={logo} className="App-logo" alt="logo" />
+//           </header>
+//           <FirstCounter/>
+//           <br/>
+//           <SecondCounter/>
+//         </div>
+//       </Provider>
+
+//     )
+//   }
+// }
+
+// export default App;
+
+
+//===================TO DO LIST CONTEXT  ==============================//
+
+
+import { Component} from 'react'
+import logo from './images/logo.svg';
+import './App.css';
+import ProviderTodo from './context/Todo/ProviderTodo';
+import ToDoForm from './context/Todo/FormTodolist';
+import ToDoList from './context/Todo/ListTodoList';
+
+
+// export const RootContext = createContext();
+// const Provider = RootContext.Provider;
+
+class App extends Component {
+
+  render() {
+    return (
+      <ProviderTodo>
+        <div className="App">
+          <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          </header>
+          <ToDoForm/>
+          <br/>
+          <ToDoList/>
+         </div>
+      </ProviderTodo>
+    );
+  }
+}
+
+export default App;
