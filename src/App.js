@@ -2,7 +2,7 @@
 // import './App.css';
 // import './MyStyle.css'
 
-import { useState } from "react";
+import { createContext, useReducer, useState } from "react";
 
 
 
@@ -827,7 +827,7 @@ import { useState } from "react";
 // export default App;
 
 
-//==========todolist=======//
+//==========todolist redux-hookss=======//
 
 // function App(){
 //   const [todos, setToDos]=useState([{
@@ -836,30 +836,86 @@ import { useState } from "react";
 //   }])
 // }
 
+// import logo from './images/logo.svg';
+// import './App.css';
+// import { useSelector } from "react-redux";
+// // import IncrementButton from "./redux-hooks/component/IncrementButton";
+// // import DecrementButton from "./redux-hooks/component/DecrementButton";
+// import { TodoForm } from "./redux-hooks/todo/TodoForm";
+// import { TodoList } from "./redux-hooks/todo/TodoList";
+// const App=()=>{
+
+//   // const counter = useSelector((state)=>state.nilai)
+//   //useSelector biar bisa ambil state lgsg dr store nya
+//   return(
+//     <div className="App">
+//          <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo" />
+//         </header>
+//         {/* {counter}
+//         <br/>
+//         <IncrementButton/>
+//         <DecrementButton/> */}
+//         <TodoForm/>
+//         <TodoList/>
+
+//     </div>
+
+//   )
+// }
+
+// export default App
+
+
+//==========================Context-hoooks================================//
 import logo from './images/logo.svg';
 import './App.css';
-import { useSelector } from "react-redux";
-// import IncrementButton from "./redux-hooks/component/IncrementButton";
-// import DecrementButton from "./redux-hooks/component/DecrementButton";
-import { TodoForm } from "./redux-hooks/todo/TodoForm";
-import { TodoList } from "./redux-hooks/todo/TodoList";
+import ActionTypeReduxHooks from "./redux-hooks/ActionTypeRedux-Hooks";
+import IncrementButton from "./context-hooks/IncrementButton";
+
+export const RootContext=createContext()
+const initial={nilai:5}
+
+const reducer = (state,action)=>{
+  switch(action.type){
+        case ActionTypeReduxHooks.PLUS:{
+            return{
+                ...state,
+                nilai : state.nilai+1
+            }
+        }
+        case ActionTypeReduxHooks.MINUS:{
+            return{
+                ...state,
+                nilai : state.nilai-1
+            }
+
+        }
+        default : return state
+        
+    }
+}
+
 const App=()=>{
 
-  // const counter = useSelector((state)=>state.nilai)
-  //useSelector biar bisa ambil state lgsg dr store nya
+  const[angka,dispatch]=useReducer(reducer,initial)
+
+  const hanldeIncrement=(data)=>{
+    console.log("dispatch data", data);
+    dispatch(data)
+  }
+
   return(
-    <div className="App">
+    <RootContext.Provider value={{value:angka, dispatch: hanldeIncrement}}>
+        <div className="App">
          <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        {/* {counter}
-        <br/>
         <IncrementButton/>
-        <DecrementButton/> */}
-        <TodoForm/>
-        <TodoList/>
+        </div>
 
-    </div>
+    </RootContext.Provider>
+
 
   )
 }
