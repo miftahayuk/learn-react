@@ -836,3 +836,32 @@ import { useState } from "react";
 //   }])
 // }
 
+import logo from './images/logo.svg';
+import './App.css';
+import { useSelector } from "react-redux";
+// import IncrementButton from "./redux-hooks/component/IncrementButton";
+// import DecrementButton from "./redux-hooks/component/DecrementButton";
+import { TodoForm } from "./redux-hooks/todo/TodoForm";
+import { TodoList } from "./redux-hooks/todo/TodoList";
+const App=()=>{
+
+  // const counter = useSelector((state)=>state.nilai)
+  //useSelector biar bisa ambil state lgsg dr store nya
+  return(
+    <div className="App">
+         <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+        {/* {counter}
+        <br/>
+        <IncrementButton/>
+        <DecrementButton/> */}
+        <TodoForm/>
+        <TodoList/>
+
+    </div>
+
+  )
+}
+
+export default App
