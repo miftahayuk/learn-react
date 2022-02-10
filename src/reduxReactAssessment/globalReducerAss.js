@@ -4,7 +4,7 @@ const initialState={
     addForm : false
 }
 
-const reducerTodoList=(state=initialState, action)=>{
+const reducerTodoListHooks=(state=initialState, action)=>{
     switch (action.type){
         case ActionTypeTodo.ADD_TODO:
             return{
@@ -26,4 +26,4 @@ const reducerTodoList=(state=initialState, action)=>{
     }
 }
 
-export default reducerTodoList
+export default reducerTodoListHooks
