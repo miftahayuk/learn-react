@@ -10,16 +10,16 @@ import { Provider } from 'react-redux';
 // import rootReducer from './reduxReact/globalReducer';
 // import reducerTodoList from './reduxReactAssessment/globalReducerAss';
 // import reducerTodoListHooks from './reduxReactAssessment/globalReducerAss';
-import {store} from './redux-hooks/CounterStore'
+// import {store} from './redux-hooks/CounterStore'
 // const store = createStore(rootReducer)
 // const store= createStore(reducerTodoListHooks)
 
 ReactDOM.render(
   //provider ini dr react-redux (pintu masuk) supaya si store ini bisa dipanggil oleh app dan anak2nya
   <React.StrictMode>
-      <Provider store={store}>
+      {/* <Provider> */}
         <App/>
-      </Provider>
+      {/* </Provider> */}
   </React.StrictMode>,
 
   document.getElementById('root')

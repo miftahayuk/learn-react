@@ -2,7 +2,7 @@
 // import './App.css';
 // import './MyStyle.css'
 
-import { createContext, useReducer, useState } from "react";
+// import { createContext, useReducer, useState } from "react";
 
 
 
@@ -520,402 +520,65 @@ import { createContext, useReducer, useState } from "react";
 
 // export default App;
 
-
-
-//==================== COUNTER HOOKS==========================///
-
-// import logo from './images/logo.svg';
-// import './App.css';
-// import { useState } from 'react';
-// import ButtonIncrement from './hooks/ButtonIncrement';
-// import ButtonDecrement from './hooks/ButtonDecrement';
-
-
-// const App = ()=> {
-//     const [number,setNumber]=useState(0)
-
-    
-//     const result=(number)=>{
-//       setNumber(number)
-//     }
-
-
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//         </header>
-//         {number}
-//         {/* <button onClick={increment}>PLUS</button> */}
-//         {/* <button onClick={decrement}>MINUS</button> */}
-//         <br/>
-//         <ButtonIncrement number={number} callback={result}/>
-//         <ButtonDecrement number={number} callback={result}/>
-//       </div>
-//     )
-  
-// }
-
-// export default App;
-
-
-//==========================Hooks To Do List=====================
-
-// import './reduxReactAssessment/styleReduxAss.css'
-// import './App.css';
-
-// import Listhookstodo from './hooksTodoList/Listhookstodo';
-// import Formhookstodo from './hooksTodoList/Formhookstodo';
-// // import { connect } from 'react-redux';
-// // import ActionTypeTodoHooks from './hooksTodoList/globalActionTodo';
-// import { useState } from 'react';
-
-// function App () {
-//   const [addForm, setaddForm]=useState(true)
-  
-
-//     return (
-//       <div>
-//         <header className="App-header">
-//           TO DO LIST APP
-//         </header>
-//         <Formhookstodo/>
-//         <br/>
-//         <br/>
-//         <Listhookstodo/>
-//       </div>
-//     )
-  
-// }
-
-// export default  (App);
-
-
-//=======================================================//
-// import React, { useState } from "react";
-// import "./App.css";
-
-// const App = () => {
-//   const [todos, setTodos] = useState([]);
-//   const [todo, setTodo] = useState("");
-//   const [todoEditing, setTodoEditing] = useState(null);
-//   const [editingText, setEditingText] = useState("");
-
-//   function handleSubmit(e) {
-//     e.preventDefault();
-//     const newTodo = {
-//       id: Math.ceil(Math.random()*100),
-//       text: todo,
-//     };
-//     setTodos([...todos].concat(newTodo));
-//     setTodo("");
-//   }
-
-//   function deleteTodo(id) {
-//     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
-//     setTodos(updatedTodos);
-//   }
-  
-
-//   function submitEdits(id) {
-//     const updatedTodos = [...todos].map((todo) => {
-//       if (todo.id === id) {
-//         todo.text = editingText;
-//       }
-//       return todo;
-//     });
-//     setTodos(updatedTodos);
-//     setTodoEditing(null);
-//   }
-
-//   const [addForm, setaddForm]= useState(true)
-
-//   const addForms=()=>{
-//     setaddForm(false)
-//   }
-  
-
-//   return (
-//     // <>
-//     //   {
-//     //     {addForm}?<>      
-//     //     <form onSubmit={handleSubmit}>
-//     //     <input
-//     //       type="text"
-//     //       onChange={(e) => setTodo(e.target.value)}
-//     //       value={todo}
-//     //     />
-//     //     <button type="submit">SUBMIT</button>
-//     //     </form></>:<>
-//     //     <div id="todo-list">
-//     //   <h1>Todo List App</h1>
-//     //   <form onSubmit={handleSubmit}>
-//     //     <input
-//     //       type="text"
-//     //       onChange={(e) => setTodo(e.target.value)}
-//     //       value={todo}
-//     //     />
-//     //     <button type="submit">SUBMIT</button>
-//     //   </form>
-//     //   {todos.map((todo) => (
-//     //     <div key={todo.id} className="todo">
-//     //       <div className="todo-text">
-//     //         {todo.id === todoEditing ? (
-//     //           <input
-//     //             type="text"
-//     //             onChange={(e) => setEditingText(e.target.value)}
-//     //           />
-//     //         ) : (
-//     //           <div>{todo.text}</div>
-//     //         )}
-//     //       </div>
-//     //       <div className="todo-actions">
-//     //         {todo.id === todoEditing ? (
-//     //           <button onClick={() => submitEdits(todo.id)}>Submit</button>
-//     //         ) : (
-//     //           <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
-//     //         )}
-//     //         <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-//     //       </div>
-//     //     </div>
-//     //   ))}
-//     // </div>
-//     //     </>
-//     //   }
-//     // </>
-//     <div id="todo-list">
-//       <h1>Todo List App</h1>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           onChange={(e) => setTodo(e.target.value)}
-//           value={todo}
-//         />
-//         <button type="submit">SUBMIT</button>
-//       </form>
-//       {todos.map((todo) => (
-//         <div key={todo.id} className="todo">
-//           <div className="todo-text">
-//             {todo.id === todoEditing ? (
-//               <input
-//                 type="text"
-//                 onChange={(e) => setEditingText(e.target.value)}
-//               />
-//             ) : (
-//               <div>{todo.text}</div>
-//             )}
-//           </div>
-//           <div className="todo-actions">
-//             {todo.id === todoEditing ? (
-//               <button onClick={() => submitEdits(todo.id)}>Submit</button>
-//             ) : (
-//               <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
-//             )}
-//             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default App;
-
-
-
-//=================TODOLIST HOOKS====================//
-// import { useState } from "react"
-// import "./App.css"
-// import FormHooks from "./hooksTodoList/Formhookstodo"
-// import ListHooks from "./hooksTodoList/Listhookstodo"
-// const App= ()=>{
-
-//     const [todos, setTodos] = useState([{title:"Belajar", description:"Belajar matematika"}]);
-//     const [addForm,setaddForm]=useState(false)
-
-
-//     const addTodo=(object)=>{
-//       setTodos([...todos,object])
-//     }
-
-//     const removeTodo=(title)=>{
-//       const updatedTodos = [...todos].filter((todo) => todo.title !== title);
-//       setTodos(updatedTodos)
-//     }
-
-//     const updateTodo=(title, newTodoTitle,newTodoDesc)=>{
-//         const updatedTodos = [...todos].map((todo) => {
-//           if (todos.title === title) {
-//             todos.title = newTodoTitle;
-//             todos.description=newTodoDesc
-//           }
-//           return todo;
-//         });
-//         setTodos(updatedTodos);
-//     }
-
-//     const move=(condition)=>{
-//       setaddForm(condition)
-//     }
-
-
-//     return(
-//       <>
-//       {
-//       addForm ? <FormHooks callbackMove={move} callbackremoveTodo={removeTodo} callbackaddTodo={addTodo}/> : 
-//       <ListHooks listTodos={todos}  callbackMove={move} callbackRemove={removeTodo} callbackUpdate={updateTodo}/>}
-//       </>
-//     )
-// }
-
-// export default App
-
-
-//===================== TO DO LIST HOOKS KAK WILDA=============================//
-// import { useState } from 'react';
-// import './App.css';
-// import ToDoForm from './hooksTodoListKakWilda/FormTodo';
-// import ToDoList from './hooksTodoListKakWilda/ListTodo';
-
-
-// const App = () => {
-//     const [toDoList, setToDos] = useState([{
-//         toDo : 'belajar',
-//         description: 'belajar react'
-//     }])
-    
-//     const [addForm, setAddForm] = useState(false)
-//     const [addData, setAddData] = useState(true)
-//     const [updateData, setUpdateData] = useState(true)
-//     const [id, setId] = useState(null)
-   
-    
-//     const updateValue = (val, action) => {
-//         switch (action) {
-//             case "form":
-//                 setAddForm(val)
-//                 break;
-//             case "todos":
-//                 setToDos(val)
-//                 break;
-//             case "addData":
-//                 setAddData(val)
-//                 break;
-//             case "updateData":
-//                 setUpdateData(val)
-//                 break;
-//             case "setId":
-//                 setId(val)
-//                 break;
-//             default:
-//                 break;
-//         }
-//     }
-
-
-//     return(
-//         <div className='App'>
-//             {
-//                 addForm ? <ToDoForm toDoList={toDoList} updateValue={updateValue} id={id} addData={addData} updateData={updateData}/> : 
-//                 <ToDoList toDoList={toDoList} updateValue={updateValue}/>
-//             }
-            
-//         </div>
-//     );
-// }
-
-// export default App;
-
-
-//==========todolist redux-hookss=======//
-
-// function App(){
-//   const [todos, setToDos]=useState([{
-//     todo : "Belajar",
-//     desc : "Belajat"
-//   }])
-// }
-
-// import logo from './images/logo.svg';
-// import './App.css';
-// import { useSelector } from "react-redux";
-// // import IncrementButton from "./redux-hooks/component/IncrementButton";
-// // import DecrementButton from "./redux-hooks/component/DecrementButton";
-// import { TodoForm } from "./redux-hooks/todo/TodoForm";
-// import { TodoList } from "./redux-hooks/todo/TodoList";
-// const App=()=>{
-
-//   // const counter = useSelector((state)=>state.nilai)
-//   //useSelector biar bisa ambil state lgsg dr store nya
-//   return(
-//     <div className="App">
-//          <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//         </header>
-//         {/* {counter}
-//         <br/>
-//         <IncrementButton/>
-//         <DecrementButton/> */}
-//         <TodoForm/>
-//         <TodoList/>
-
-//     </div>
-
-//   )
-// }
-
-// export default App
-
-
-//==========================Context-hoooks================================//
-import logo from './images/logo.svg';
+//===================ROUTING==================================//
 import './App.css';
-import ActionTypeReduxHooks from "./redux-hooks/ActionTypeRedux-Hooks";
-import IncrementButton from "./context-hooks/IncrementButton";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import Home from "./routing/home/home";
+import Customer from "./routing/customer/customer";
+import Product from "./routing/product/product";
+import { ProductForm } from './routing/product/productForm';
+import { Outlet } from 'react-router';
+import { CustomerForm } from './routing/customer/customerForm';
+import { PageNotFound } from './routing/pageNotFound';
 
-export const RootContext=createContext()
-const initial={nilai:5}
-
-const reducer = (state,action)=>{
-  switch(action.type){
-        case ActionTypeReduxHooks.PLUS:{
-            return{
-                ...state,
-                nilai : state.nilai+1
-            }
-        }
-        case ActionTypeReduxHooks.MINUS:{
-            return{
-                ...state,
-                nilai : state.nilai-1
-            }
-
-        }
-        default : return state
-        
-    }
-}
 
 const App=()=>{
 
-  const[angka,dispatch]=useReducer(reducer,initial)
-
-  const hanldeIncrement=(data)=>{
-    console.log("dispatch data", data);
-    dispatch(data)
-  }
-
   return(
-    <RootContext.Provider value={{value:angka, dispatch: hanldeIncrement}}>
-        <div className="App">
-         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <IncrementButton/>
-        </div>
 
-    </RootContext.Provider>
+    <Router>
 
+      {/* Dibawah ini adalah navigation */}
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+        </ul>
+        
+        <ul>
+          <li>
+            <Link to="products">Product</Link>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <Link to="customers">customer</Link>
+          </li>
+        </ul>
+        
+
+      </nav>
+
+
+      {/* Dibawah ini adalah konfigurasi */}
+      <Routes> 
+        <Route path="/" element={<Home/>}/>
+        <Route path="products" element={<Outlet/>}>
+          <Route index element={<Product/>}/>
+          <Route path="form" element={<ProductForm/>}/>
+        </Route>
+        <Route path="customers" element={<Outlet/>}>
+          <Route index element={<Customer/>}/>
+          <Route path="form" element={<CustomerForm/>}/>
+          {/* dua di bawah ini sama aja, baris pertama tuh kek ngereplace, mending kek yang brs dua aja */}
+          {/* <Route path='/customers/:name' element={<Customer/>}></Route> */}
+          <Route path=':name' element={<Customer/>}/>
+        </Route>
+        <Route path="*" element={<PageNotFound/>} />
+      </Routes>
+    </Router>
 
   )
 }
