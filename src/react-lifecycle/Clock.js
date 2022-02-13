@@ -31,11 +31,11 @@ class Clock extends Component{
         //biasanya untuk clean up
     }
 
-    shouldComponentUpdate(){
-        console.log("should component update called");
-        // return true //ini update trs
-        return false // ini update nya ya berenti
-    }
+    // shouldComponentUpdate(){
+    //     console.log("should component update called");
+    //     // return true //ini update trs
+    //     return false // ini update nya ya berenti
+    // }
 
     getSnapshotBeforeUpdate(){
         console.log("get snapshoot called");
